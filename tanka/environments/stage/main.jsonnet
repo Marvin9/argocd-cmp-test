@@ -13,7 +13,11 @@ local promSvc = import '../../lib/prometheus/service.libsonnet';
 
   // Prometheus
   prometheus: {
-    deployment: promDeploy,
+    deployment: promDeploy {
+      spec: {
+        replicas: 2,
+      },
+    },
     service: promSvc,
   },
 }

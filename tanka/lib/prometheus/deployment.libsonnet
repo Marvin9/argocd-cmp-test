@@ -6,7 +6,7 @@
   },
   spec+: {
     minReadySeconds: 10,
-    replicas: 1,
+    replicas+: 1,
     revisionHistoryLimit: 10,
     selector: {
       matchLabels: {

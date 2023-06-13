@@ -15,7 +15,7 @@ local promSvc = import '../../lib/prometheus/service.libsonnet';
   prometheus: {
     deployment: promDeploy + {
       spec+: {
-        replicas: 2,
+        replicas: 1,
       },
     },
     service: promSvc,

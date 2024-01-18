@@ -1,0 +1,9 @@
+{
+  "name": "cdk8s",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "cdk8s-cli": "^2.198.29"
+  }
+}

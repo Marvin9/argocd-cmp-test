@@ -19,7 +19,7 @@ export class Core extends Chart {
 
     new KubeDeployment(this, 'deployment', {
       spec: {
-        replicas: 1,
+        replicas: 2,
         selector: {
           matchLabels: label
         },

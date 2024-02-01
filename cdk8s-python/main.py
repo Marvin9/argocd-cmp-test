@@ -11,7 +11,7 @@ class MyChart(Chart):
        # Define a Kubernetes Deployment
        k8s.KubeDeployment(self, "my-deployment",
                        spec=k8s.DeploymentSpec(
-                           replicas=3,
+                           replicas=1,
                            selector=k8s.LabelSelector(match_labels={"app": app_label}),
                            template=k8s.PodTemplateSpec(
                                metadata=k8s.ObjectMeta(labels={"app": app_label}),

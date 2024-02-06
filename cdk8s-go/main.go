@@ -1,10 +1,13 @@
 package main
 
 import (
+	"fmt"
+
 	"example.com/cdk8s-go/imports/k8s"
 	"github.com/aws/constructs-go/constructs/v10"
 	"github.com/aws/jsii-runtime-go"
 	"github.com/cdk8s-team/cdk8s-core-go/cdk8s/v2"
+	"github.com/duke-git/lancet/v2/strutil"
 )
 
 func NewChart(scope constructs.Construct, id string, ns string, appLabel string) cdk8s.Chart {
@@ -16,6 +19,12 @@ func NewChart(scope constructs.Construct, id string, ns string, appLabel string)
 	labels := map[string]*string{
 		"app": jsii.String(appLabel),
 	}
+
+	appContainer := "app-container"
+
+	rev := strutil.Reverse(appContainer)
+
+	fmt.Println(rev)
 
 	k8s.NewKubeDeployment(chart, jsii.String("deployment"), &k8s.KubeDeploymentProps{
 		Spec: &k8s.DeploymentSpec{

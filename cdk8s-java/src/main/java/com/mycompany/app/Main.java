@@ -13,6 +13,7 @@ import imports.k8s.LabelSelector;
 import imports.k8s.ObjectMeta;
 import imports.k8s.PodSpec;
 import imports.k8s.PodTemplateSpec;
+import org.apache.commons.lang3.math.Fraction;
 
 import java.util.Collections;
 import java.util.List;
@@ -26,6 +27,8 @@ public class Main extends Chart {
 
     public Main(final Construct scope, final String id, final ChartProps props, final String appLabel) {
         super(scope, id, props);
+
+        System.out.println(Fraction.FOUR_FIFTHS);
 
         Map<String, String> label = Collections.singletonMap("app", appLabel);
 

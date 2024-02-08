@@ -31,7 +31,7 @@ public class Main extends Chart {
 
         new KubeDeployment(this, "my-deployment", KubeDeploymentProps.builder()
                 .spec(DeploymentSpec.builder()
-                        .replicas(3)
+                        .replicas(1)
                         .selector(LabelSelector.builder()
                                 .matchLabels(label)
                                 .build())
